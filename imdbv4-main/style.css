@@ -1,0 +1,14 @@
+.card{
+    background-color: rgb(43, 43, 43);
+}
+.card-title{
+    color: white;
+    margin: 10px 0px;
+
+}
+.fa-star{
+    color: white;
+}
+.fa-star:hover{
+    color: gold;
+}
