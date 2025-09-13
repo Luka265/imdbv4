@@ -49,4 +49,3 @@ class Movies {
 }
 let movies = Movies.getMovieList();
 console.log(movies);
-    
