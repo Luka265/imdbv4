@@ -1,5 +1,5 @@
 class Movies {
-    static getMovieList() {
+    getMovieList() {
         let list = [
             {
                 id : 1,
@@ -39,13 +39,53 @@ class Movies {
             {
                 id : 6,
                 name : 'Clarkson',
-                description : 'X',
+                description : 'strangers',
                 photo : 'X',
                 rating : 8.8
             },
         ]
         return list;
+        
+    }
+    printMyName (firstName, lastName){
+        console.log('Hello ' + firstName +' '+ lastName)
+    }
+    itemHtml (item) {
+        let html = ''
+        html += '<div class="card">'
+        html += '<div class="card-body">'
+        
+        
+        html += '<h6 class="card-title">'+item.id+'. '+item.name+'</h6>'
+        
+        
+        html += '</div>'//end of card-body
+        html += '</div>'//end of card
+        
+        
+        
+        
+        console.log(html)
+    }
+    drawItem () {
+        let list = this.getMovieList()
+        this.itemHtml(list[5])
     }
 }
-let movies = Movies.getMovieList();
-console.log(movies);
+
+
+var moviesobject = new Movies()   
+moviesobject.drawItem()
+
+
+/* moviesobject.printMyName('luka', 'ghana') */
+
+
+// var newstring = 'luka'
+
+// function printMyName (firstName, lastName){
+//     console.log('Hello ' + firstName +' '+ lastName)
+// }
+
+// printMyName('luka', 'ghana')
+
