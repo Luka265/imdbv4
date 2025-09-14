@@ -4,64 +4,75 @@ class Movies {
             {
                 id : 1,
                 name : '9 Strangers',
-                description : 'X',
-                photo : 'X',
-                rating : 8.8
+                description : 'Theres 9 strangers',
+                photo : 'image1',
+                rating : 8.5
             },
             {
                 id : 2,
                 name : '9 String',
-                description : 'X',
-                photo : 'X',
-                rating : 8.8
+                description : '9 strings in air',
+                photo : 'image2',
+                rating : 6.8
             },
             {
                 id : 3,
                 name : 'John Wick',
-                description : 'X',
-                photo : 'X',
-                rating : 8.8
+                description : 'His dog dies',
+                photo : 'image3',
+                rating : 3.8
             },
             {
                 id : 4,
                 name : 'Detective',
-                description : 'X',
-                photo : 'X',
-                rating : 8.8
+                description : '2 true detectives',
+                photo : 'image4',
+                rating : 10.0
             },
             {
                 id : 5,
                 name : 'DeptQ',
-                description : 'X',
-                photo : 'X',
-                rating : 8.8
+                description : 'deptq description',
+                photo : 'image5',
+                rating : 4.3
             },
             {
                 id : 6,
                 name : 'Clarkson',
                 description : 'strangers',
-                photo : 'X',
-                rating : 8.8
+                photo : 'image6',
+                rating : 7.8
             },
         ]
         return list;
         
     }
-    printMyName (firstName, lastName){
-        console.log('Hello ' + firstName +' '+ lastName)
-    }
     itemHtml (item) {
         let html = ''
         html += '<div class="card">'
         html += '<div class="card-body">'
+        html += '<div class="d-flex align-items-center me-4"><i class="fa-solid fa-star star-system me-1" style="color: #FFD43B;">'
         
+            html += '<span class="text-light">'+item.rating+'</span>'
         
-        html += '<h6 class="card-title">'+item.id+'. '+item.name+'</h6>'
-        
-        
+        html += '</i></div>'//end of rating
+
+            html += '<h6 class="card-title">'+item.id+'. '+item.name+'</h6>'
+        html += '<div class="d-flex flex-column justify-content-between align-items-center">' //start of button container
+
+            html += '<button type="button" class="btn btn-outline-secondary watchlist text-primary rounded-pill border-dark" style="background-color: rgb(63, 63, 63);"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i>Watch Now</button>'
+            html += '<button type="button" class="btn btn-outline-secondary trailer-btn my-2 border-0 btn-sm rounded-pill"><i class="fa-solid fa-play play-icon me-2"></i>Trailer</button>'
+        html += '<div class="d-flex justify-content-between">' //start of star container
+             html += '<button type="button" class="btn btn-sm"><i class="fa-regular fa-star star-fav"></i></button>'
+             html += '<button type="button" class="btn btn-sm"><i class="fa-regular fa-star star-fav"></i></button>'
+             html += '<button type="button" class="btn btn-sm"><i class="fa-regular fa-star star-fav"></i></button>'
+             html += '<button type="button" class="btn btn-sm"><i class="fa-regular fa-star star-fav"></i></button>'
+             html += '<button type="button" class="btn btn-sm"><i class="fa-regular fa-star star-fav"></i></button>'
+        html += '</div>' //end of star container
+        html += '</div>' //end of button container
         html += '</div>'//end of card-body
         html += '</div>'//end of card
-        
+                
         
         
         
@@ -69,7 +80,7 @@ class Movies {
     }
     drawItem () {
         let list = this.getMovieList()
-        this.itemHtml(list[5])
+        this.itemHtml(list[1])
     }
 }
 
@@ -88,4 +99,6 @@ moviesobject.drawItem()
 // }
 
 // printMyName('luka', 'ghana')
-
+/* printMyName (firstName, lastName){
+        console.log('Hello ' + firstName +' '+ lastName)
+    } */
