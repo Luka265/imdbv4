@@ -75,18 +75,30 @@ class Movies {
                 
         
         
-        
         console.log(html)
     }
     drawItem () {
         let list = this.getMovieList()
         this.itemHtml(list[1])
     }
-}
+    drawitems () {
+        var array = this.getMovieList()
+        array.forEach(function (item, index){
+        console.log (item, index);}
+    )
+    
+        }   
+        //aq unda gamovidzaxot listi (filmebis masivi getmovielist-it)
+        //aq unda gaketdes cikli anu interaqciebi js loop through array (aqaa sxvadasxva funqcia arraystvis da sxva aris obieqtistvis)
+        //ramdeni obieqticaa ciklshi imdeni qmedeba unda iyos ciklshic
+        //console logit galoge index da item (unda gailogos ise ro ramdenicaa index imdeni dagvibrunos chavagdot this.drawitem,)
+        
+    }
 
 
 var moviesobject = new Movies()   
 moviesobject.drawItem()
+moviesobject.drawitems()
 
 
 /* moviesobject.printMyName('luka', 'ghana') */
