@@ -83,7 +83,7 @@ class Movies {
     }
     drawitems () {
         let array = this.getMovieList()
-        array.forEach((item, index) => {
+        array.forEach( function (item, index){
         console.log (item, index)
         this.drawItem(item);
     })
