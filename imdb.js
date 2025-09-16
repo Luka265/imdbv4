@@ -77,16 +77,17 @@ class Movies {
         
         console.log(html)
     }
-    drawItem () {
+    drawItem (item) {
         let list = this.getMovieList()
-        this.itemHtml(list[1])
+        this.itemHtml(item)
     }
     drawitems () {
-        var array = this.getMovieList()
-        array.forEach(function (item, index){
-        console.log (item, index);}
-    )
-    
+        let array = this.getMovieList()
+        array.forEach((item, index) => {
+        console.log (item, index)
+        this.drawItem(item);
+    })
+        
         }   
         //aq unda gamovidzaxot listi (filmebis masivi getmovielist-it)
         //aq unda gaketdes cikli anu interaqciebi js loop through array (aqaa sxvadasxva funqcia arraystvis da sxva aris obieqtistvis)
@@ -97,7 +98,6 @@ class Movies {
 
 
 var moviesobject = new Movies()   
-moviesobject.drawItem()
 moviesobject.drawitems()
 
 
