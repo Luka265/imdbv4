@@ -81,22 +81,29 @@ class Movies {
         this.itemHtml(item)
 
     }
-    drawitems () {
+    drawItems () {
         let array = this.getMovieList()
         array.forEach((item, index) => {
         console.log (item, index)
         this.drawItem(item);
     })
-        }}
+        }
+    renderTitle () {
+
+    }
+    }
 
 
 var moviesobject = new Movies()   
-moviesobject.drawitems()
+moviesobject.drawItems()
 
   var div = document.getElementById('testTitle');
   var h1 = document.createElement('h1');
   h1.textContent = 'This is a title';
   div.appendChild(h1);
+
+var renderTitle = new Movies() 
+rendertitle()
 
 /* moviesobject.printMyName('luka', 'ghana') */
 
