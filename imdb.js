@@ -84,26 +84,59 @@ class Movies {
     drawItems () {
         let array = this.getMovieList()
         array.forEach((item, index) => {
-        console.log (item, index)
-        this.drawItem(item);
+        console.log (item, index);
     })
+        var div = document.getElementById('testTitle');
+        var h1 = document.createElement('h1');
+        h1.textContent = 'This is a title';
+        div.appendChild(h1);
+
+        function createCard(movie) {
+            var div = document.getElementById('jsCardContainer');
+            var colDiv = document.createElement('div');
+            colDiv.className = 'col-12 col-sm-6 col-md-4 col-lg-2 mb-4';
+            var cardDiv = document.createElement('div')
+            cardDiv.className = 'card';
+            var cardBodyDiv = document.createElement('div');
+            cardBodyDiv.className = 'card-body';
+            var ratingContainer = document.createElement('div');
+            ratingContainer.className = 'd-flex align-items-center me-4';
+            var solidStar = this._createIcon('fa-solid fa-star star-system me-1', 'color: #FFD43B;');
+            var titleH6 = document.createElement('h6');
+            titleH6.className = 'card-title';
+            var buttonGroupContainer = document.createElement('div');
+            buttonGroupContainer.className = 'd-flex flex-column justify-content-between';
+            var watchNowButton = document.createElement('button');
+            watchNowButton.type = 'button';
+            watchNowButton.className = 'btn btn-outline-secondary watchlist text-primary rounded-pill border-dark';
+            watchNowButton.style.backgroundColor = 'rgb(63, 63, 63)';
+            var trailerButton = document.createElement('button');
+            trailerButton.type = 'button';
+            trailerButton.className = 'btn btn-outline-secondary trailer-btn my-2 border-0 btn-sm rounded-pill';
+            
+        }
+
+            
+        /* var container = document.getElementById('jsCardContainer')
+        const newHeading = document.createElement('h6');
+        newHeading.textContent = '1. 9 Strangers';
+        newHeading.style.color = 'White';
+        newHeading.style.margintop = '10px';
+        newHeading.style.marginbottom = '10px'; */
         }
     renderTitle () {
-
+        var renderTitle = new Movies() 
+        renderTitle()
     }
+
+    renderMovies() {
+        var renderMovies = new Movies()
+        renderMovies()
     }
 
 
-var moviesobject = new Movies()   
-moviesobject.drawItems()
-
-  var div = document.getElementById('testTitle');
-  var h1 = document.createElement('h1');
-  h1.textContent = 'This is a title';
-  div.appendChild(h1);
-
-var renderTitle = new Movies() 
-rendertitle()
+    var moviesobject = new Movies()   
+    moviesobject.drawItems()
 
 /* moviesobject.printMyName('luka', 'ghana') */
 
@@ -118,3 +151,9 @@ rendertitle()
 /* printMyName (firstName, lastName){
         console.log('Hello ' + firstName +' '+ lastName)
     } */
+/* gaakete erti div id it movielist 
+js it gaakete analogi qveda mxares
+gamovidzaxot mravlobiti metodi
+egreve gamovidzaxot item html am ciklshi da yvela boxis kodi sheikras ert ciklad 
+sanam gailupeba erti html cvladi  romelsac miemateba html is kodi
+da es string chasvi divshi */
